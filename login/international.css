@@ -1,0 +1,75 @@
+/* Background gradient */
+body {
+    background: linear-gradient(to right, #2980b9, #6dd5fa); /* Blue gradient background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the whole page */
+.transaction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Adds space around the container */
+}
+
+/* Box styling for the transaction form */
+.transaction-box {
+    width: 100%;
+    max-width: 350px; /* Limits the box width to 350px */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading for the transaction box */
+.transaction-box h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Label styling */
+.transaction-form label {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #333;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Input fields styling */
+.transaction-form input,
+.transaction-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.proceed-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #2980b9, #6dd5fa);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.proceed-btn:hover {
+    background: linear-gradient(to right, #2980b9, #6dd5fa);
+}

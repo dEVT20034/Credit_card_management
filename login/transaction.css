@@ -1,0 +1,98 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and Font Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    background: linear-gradient(to right, #3a7bd5, #00d2ff); /* Soft blue gradient */
+    color: #f1f1f1; /* Light text for dark backgrounds */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout Styling */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent box */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Premium shadow effect */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background: #2c3e50; /* Sleek dark blue-gray sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar h2 {
+    font-size: 1.8em;
+    color: #ecf0f1; /* Light color for the sidebar heading */
+    margin-bottom: 10px;
+}
+
+.sidebar span {
+    color: #bdc3c7; /* Lighter secondary text */
+    font-size: 1.2em;
+}
+
+/* Transaction Box */
+.transaction-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff; /* Clean white */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.transaction-box h1 {
+    font-size: 2em;
+    color: #34495e; /* Darker gray-blue for the header */
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.transaction-box button {
+    width: 70%; /* Improved size for balance */
+    padding: 15px 0;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    background: linear-gradient(to right, #2980b9, #6dd5fa); /* Cool blue gradient */
+    color: #fff; /* White text for contrast */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.transaction-box button:hover {
+    background: linear-gradient(to right, #6dd5fa, #00bcd4); /* Brighter blue gradient on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.transaction-box button:active {
+    transform: translateY(1px); /* Slight press effect */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); /* Inner shadow on click */
+}

@@ -1,0 +1,92 @@
+/* reward.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e6f0ff; /* Light background color */
+    color: #333333; /* Dark gray text */
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333; /* Dark gray */
+    color: #ffffff;
+}
+
+.header h1 {
+    font-size: 2em;
+}
+
+.header .points {
+    font-size: 1.5em;
+    color: #ffd700; /* Gold color for points */
+}
+
+/* Coupons Section */
+.coupons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual coupon card styling */
+.coupon-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.coupon-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.coupon-card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.coupon-card p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.points-needed {
+    font-weight: bold;
+    color: #2980b9; /* Blue color */
+}
+
+/* Redeem button styling */
+.redeem-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #2980b9, #6dd5fa);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.redeem-btn:hover {
+    background: #2980b9;
+}
+
+.coupon-card:hover {
+    transform: translateY(-5px);
+}

@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e2f; /* Dark charcoal background */
+    color: #e4e4e4; /* Light gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    background-color: #282a36; /* Slightly lighter slate gray */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for card effect */
+}
+
+/* Header */
+.header h1 {
+    color: #ffffff; /* Bright white for clarity */
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Customer Info Section */
+.customer-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #343849; /* Dark gray */
+    color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customer-info h2 {
+    font-size: 1.3em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1em;
+}
+
+.info-group p strong {
+    font-weight: 600;
+}
+
+/* Cards Section */
+.cards-section h2 {
+    font-size: 1.3em;
+    color: #ffffff; /* Bright white */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cards-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Card Styling */
+.card {
+    background: #343849; /* Slightly lighter slate gray for cards */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for card effect */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Block Button */
+.block-button {
+    background-color: #ff6b6b; /* Vibrant coral red */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.block-button:hover {
+    background-color: #ff5252; /* More intense red on hover */
+}
+
+/* Unblock Button */
+.unblock-button {
+    background-color: #4cd137; /* Green for unblock */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none; /* Hide by default */
+}
+
+.unblock-button:hover {
+    background-color: #2ecc71; /* Slightly lighter green on hover */
+}
+
+/* Show unblock button when card is blocked */
+.card .status.blocked + .unblock-button {
+    display: inline-block;
+}
+
+/* Status Colors */
+.status.active {
+    color: #4cd137; /* Bright green for active */
+    font-weight: bold;
+}
+
+.status.blocked {
+    color: #ff6b6b; /* Coral red for blocked */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .block-button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .unblock-button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+}

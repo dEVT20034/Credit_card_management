@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Transaction</title>
+    <link rel="stylesheet" href="international.css">
+</head>
+<body>
+    <div class="transaction-container">
+        <div class="transaction-box">
+            <h1>International Transaction</h1>
+            <form action="otp_page.html" method="POST" class="transaction-form">
+                <label for="accountNumber">Receiver's Account Number</label>
+                <input type="text" id="accountNumber" name="accountNumber" placeholder="Enter Receiver's Account Number" required>
+
+                <label for="receiverCountry">Receiver's Country</label>
+                <select id="receiverCountry" name="receiverCountry" required onchange="updateCurrencyAndRate()">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Australia">Australia</option>
+                </select>
+
+                <label for="currency">Receiver's Currency</label>
+                <input type="text" id="currency" name="currency" value="USD" readonly>
+
+                <label for="amount">Amount in INR</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter Amount in INR" required>
+
+                <label for="exchangeRate">Exchange Rate</label>
+                <select id="exchangeRate" name="exchangeRate" disabled>
+                    <!-- Exchange rates will be updated dynamically -->
+                </select>
+
+                <label for="transactionFees">Transaction Fees (Fixed 55 INR)</label>
+                <input type="text" id="transactionFees" name="transactionFees" value="55" readonly>
+
+                <label for="pin">PIN</label>
+                <input type="password" id="pin" name="pin" placeholder="Enter PIN" required>
+
+                <button type="submit" class="proceed-btn">Proceed</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to update currency and exchange rate based on selected country
+        function updateCurrencyAndRate() {
+            const country = document.getElementById('receiverCountry').value;
+            const currencyInput = document.getElementById('currency');
+            const exchangeRateSelect = document.getElementById('exchangeRate');
+
+            let currency = '';
+            let exchangeRates = [];
+
+            // Country-Currency mapping and exchange rate options
+            if (country === 'USA') {
+                currency = 'USD';
+                exchangeRates = ['0.012'];
+            } else if (country === 'Canada') {
+                currency = 'Canadian Dollar';
+                exchangeRates = ['0.016'];
+            } else if (country === 'Japan') {
+                currency = 'Yen';
+                exchangeRates = ['1.80'];
+            } else if (country === 'Russia') {
+                currency = 'Ruble';
+                exchangeRates = ['1.16'];
+            } else if (country === 'Australia') {
+                currency = 'Australian Dollar';
+                exchangeRates = ['0.018'];
+            }
+
+            // Update currency field
+            currencyInput.value = currency;
+
+            // Clear previous exchange rates and update with the new ones
+            exchangeRateSelect.innerHTML = '';
+            exchangeRates.forEach(rate => {
+                const option = document.createElement('option');
+                option.value = rate;
+                option.textContent = rate;
+                exchangeRateSelect.appendChild(option);
+            });
+        }
+
+        // Initialize the form with default country (USA)
+        updateCurrencyAndRate();
+    </script>
+</body>
+</html>

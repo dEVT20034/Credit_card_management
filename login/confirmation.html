@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <link rel="stylesheet" href="confirmation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1>Payment Successful</h1>
+                <p>Your payment has been processed successfully!</p>
+            </div>
+        </header>
+
+        <!-- Payment Details Section -->
+        <section class="payment-details">
+            <div class="payment-box">
+                <h2>Payment Details</h2>
+                <div class="payment-item">
+                    <label for="payment-id">Payment ID:</label>
+                    <input type="text" id="payment-id" value="PAY123456789" disabled>
+                </div>
+                <div class="payment-item">
+                    <label for="amount-paid">Amount Paid:</label>
+                    <input type="text" id="amount-paid" value="₹10,500" disabled>
+                </div>
+                <div class="payment-item">
+                    <label for="payment-method">Payment Method:</label>
+                    <input type="text" id="payment-method" value="Credit Card" disabled>
+                </div>
+                <div class="payment-item">
+                    <label for="payment-date">Payment Date:</label>
+                    <input type="text" id="payment-date" value="2024-11-20" disabled>
+                </div>
+
+                <!-- Confirmation Message -->
+                <div class="confirmation-message">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <p>Your payment has been successfully processed. Thank you for your transaction!</p>
+                </div>
+
+                <!-- Buttons for Next Actions -->
+                <div class="button-container">
+                    <button onclick="window.location.href='home.html'">Go to Home</button>
+                    <button onclick="window.location.href='t_history.html'">View Transaction History</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

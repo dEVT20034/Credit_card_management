@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details Page</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Customer Profile</h1>
+        </div>
+
+        <section class="customer-info">
+            <h2>Personal Information</h2>
+            <div class="info-group">
+                <p><strong>First Name:</strong> John</p>
+                <p><strong>Last Name:</strong> Doe</p>
+                <p><strong>Total Rewards Points:</strong> 5000</p>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <h2>Active Credit Cards</h2>
+            <ul class="cards-list">
+                <li class="card">
+                    <p><strong>Card Number:</strong> **** **** **** 1234</p>
+                    <p><strong>Status:</strong> <span class="status active">Active</span></p>
+                    <button class="block-button" onclick="blockCard(this)">Block Card</button>
+                    <button class="unblock-button" onclick="unblockCard(this)">Unblock Card</button> <!-- Unblock Button -->
+                </li>
+                <li class="card">
+                    <p><strong>Card Number:</strong> **** **** **** 5678</p>
+                    <p><strong>Status:</strong> <span class="status blocked">Blocked</span></p>
+                    <button class="block-button" onclick="blockCard(this)" disabled>Block Card</button>
+                    <button class="unblock-button" onclick="unblockCard(this)" style="display: inline-block;">Unblock Card</button> <!-- Unblock Button -->
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="details.js"></script>
+</body>
+</html>

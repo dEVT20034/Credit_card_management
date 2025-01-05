@@ -1,0 +1,103 @@
+/* General styling for the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Payment details section styling */
+.payment-details {
+    margin-top: 20px;
+}
+
+.payment-box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-item {
+    margin-bottom: 15px;
+}
+
+.payment-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-item input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+/* Confirmation message */
+.confirmation-message {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.success-icon {
+    font-size: 50px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.confirmation-message p {
+    font-size: 1.2rem;
+    color: #28a745;
+}
+
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #218838;
+}

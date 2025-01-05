@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="t_history.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<header>
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <!-- Search Bar and Button Centered -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search transactions" oninput="filterTransactions()">
+            <button><i class="fas fa-search"></i> Search</button>
+        </div>
+        <!-- Home Link Rightmost -->
+        <a href="home.html" class="home-link">Home</a>
+    </div>
+</header>
+
+<!-- Transaction History Section -->
+<main>
+    <section class="transaction-history">
+        <h1>Transaction History</h1>
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label for="status">Filter by Status</label>
+            <select id="status" name="status" onchange="filterTransactions()">
+                <option value="all">All</option>
+                <option value="successful">Successful</option>
+                <option value="failed">Failed</option>
+            </select>
+
+            <label for="date-range">Filter by Date</label>
+            <input type="date" id="start-date" name="start-date" onchange="filterTransactions()">
+            <input type="date" id="end-date" name="end-date" onchange="filterTransactions()">
+        </div>
+
+        <!-- Transaction List -->
+        <div class="transaction-list">
+            <div class="transaction-card" data-id="12345" data-status="successful" data-date="2024-11-01">
+                <h3>Transaction ID: #12345</h3>
+                <p>Date: 2024-11-01</p>
+                <p>Amount: ₹5000</p>
+                <div class="status success">Successful</div>
+                <div class="status-bar success"></div>
+            </div>
+
+            <div class="transaction-card" data-id="12346" data-status="failed" data-date="2024-11-05">
+                <h3>Transaction ID: #12346</h3>
+                <p>Date: 2024-11-05</p>
+                <p>Amount: ₹1000</p>
+                <div class="status failed">Failed</div>
+                <div class="status-bar failed"></div>
+            </div>
+
+            <div class="transaction-card" data-id="12347" data-status="successful" data-date="2024-11-08">
+                <h3>Transaction ID: #12347</h3>
+                <p>Date: 2024-11-08</p>
+                <p>Amount: ₹2000</p>
+                <div class="status success">Successful</div>
+                <div class="status-bar success"></div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <button class="load-more">Load More</button>
+    </section>
+
+    <!-- No Transactions Found -->
+    <div class="no-transactions">
+        <p>No transactions found.</p>
+        <i class="fas fa-credit-card"></i>
+    </div>
+</main>
+
+<script src="t_history.js"></script>
+
+</body>
+</html>

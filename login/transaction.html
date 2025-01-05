@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Page</title>
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Welcome, <span>Customer Name</span></h2>
+        </div>
+        <div class="transaction-box">
+            <h1>Make a Transaction</h1>
+            <button onclick="location.href='normal_transaction.html'">Normal Transaction</button>
+            <button onclick="location.href='international_transaction.html'">International Transaction</button>
+            <!-- Button to load transaction history content -->
+            <button onclick="loadTransactionHistory()">Transaction History</button>
+        </div>
+    </div>
+
+    <!-- Placeholder to load t_history.html content dynamically -->
+    <div id="transaction-history-container"></div>
+
+    <script>
+        // Function to dynamically load the t_history.html content
+        function loadTransactionHistory() {
+            const container = document.getElementById('transaction-history-container');
+            fetch('t_history.html')
+                .then(response => response.text())
+                .then(data => {
+                    container.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading transaction history:', error);
+                    container.innerHTML = '<p>Failed to load transaction history.</p>';
+                });
+        }
+    </script>
+</body>
+</html>

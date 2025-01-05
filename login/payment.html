@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1>Payment Details</h1>
+                <p>Complete your payment and settle your credit card bill.</p>
+            </div>
+        </header>
+
+        <!-- Payment Form Section -->
+        <section class="payment-form">
+            <div class="payment-box">
+                <h2>Review Your Payment</h2>
+                <div class="payment-item">
+                    <label for="amount">Amount Due:</label>
+                    <input type="text" id="amount" value="₹10,500" disabled>
+                </div>
+                <div class="payment-item">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method">
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="net-banking">Net Banking</option>
+                    </select>
+                </div>
+
+                <!-- Card Payment Form -->
+                <div id="card-details">
+                    <div class="payment-item">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" placeholder="**** **** **** 1234">
+                    </div>
+                    <div class="payment-item">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY">
+                    </div>
+                    <div class="payment-item">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" placeholder="***">
+                    </div>
+                </div>
+
+                <!-- Net Banking Details -->
+                <div id="net-banking-details" style="display:none;">
+                    <div class="payment-item">
+                        <label for="bank-name">Bank Name:</label>
+                        <input type="text" id="bank-name" placeholder="Enter your bank name">
+                    </div>
+                    <div class="payment-item">
+                        <label for="account-number">Account Number:</label>
+                        <input type="text" id="account-number" placeholder="Enter your account number">
+                    </div>
+                </div>
+
+                <!-- Payment Button -->
+                <div class="button-container">
+                    <button class="pay-btn" onclick="processPayment()">Pay Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="payment.js"></script>
+
+</body>
+</html>

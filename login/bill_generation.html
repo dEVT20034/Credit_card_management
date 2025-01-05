@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Generation</title>
+    <link rel="stylesheet" href="bill_generation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1>Credit Card Bill</h1>
+                <p>Generate your credit card bill details and proceed with payment.</p>
+            </div>
+        </header>
+
+        <!-- Bill Details Section -->
+        <section class="bill-details">
+            <div class="bill-box">
+                <h2>Your Bill Details</h2>
+                <div class="bill-item">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="**** **** **** 1234" disabled>
+                </div>
+                <div class="bill-item">
+                    <label for="due-amount">Amount Due:</label>
+                    <input type="text" id="due-amount" value="₹10,500" disabled>
+                </div>
+                <div class="bill-item">
+                    <label for="due-date">Due Date:</label>
+                    <input type="text" id="due-date" value="2024-11-25" disabled>
+                </div>
+                <div class="bill-item">
+                    <label for="minimum-payment">Minimum Payment:</label>
+                    <input type="text" id="minimum-payment" value="₹1,500" disabled>
+                </div>
+                <div class="bill-item">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method">
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="net-banking">Net Banking</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button class="pay-btn" id="payNowButton">Pay Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to handle button click for redirect
+        document.getElementById('payNowButton').addEventListener('click', function() {
+            window.location.href = 'payment.html';  // Adjust the path if necessary
+        });
+    </script>
+
+</body>
+</html>
